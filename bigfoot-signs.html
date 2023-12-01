@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="font-serif text-roboto" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Big Foot Believers United</title>
+</head>
+
+<body>
+    <header>
+        <!-- nav bar -->
+        <nav class="flex bg-gray-300 justify-center items-center flex-col sm:flex-row">
+            <a href="index.html"><img class="w-20 p-1" src="https://www.shutterstock.com/image-vector/funny-bigfoot-t-shirt-design-260nw-2353029723.jpg"
+                    alt="BigFoot logo"></a>
+            <div class="flex flex-col sm:flex-row mt-1 gap-1">
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/index.html">About Us</a>
+                </button>
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/bigfoot-signs.html">Evidence of Bigfoot</a>
+                </button>
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/bigfoot-legends.html">Bigfoot Legends</a>
+                </button>
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/bigfoot-submit-sighting.html">Submit a sighting</a>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Title -->
+        <div>
+            <h1 class="text-5xl font-bold text-center mt-5">Signs of Bigfoot</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- sightings recorded counter -->
+        <section class="flex flex-col items-center justify-center">
+            <h2 class="text-center mt-6 text-3xl">Sightings this week</h2>
+            <div id="counter" class="p-2 bg-gray-300 rounded-full text-center w-1/6">
+                <span class="font-bold text-4xl inline-block">0</span>
+            </div>
+        </section>
+        <!-- main evidence -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6 w-3/4 m-auto">
+            <div class="card bg-gray-300 rounded-lg shadow-md flex flex-col">
+                <div class="flex-grow p-6">
+                    <h3 class="text-xl font-bold mb-4">Tree Structures</h3>
+                    <p class="text-gray-700 mb-4">Bigfoot are known to bend and twist trees into various structures for signaling, marking territory, or showing migration paths. Keep an eye out for X-shaped formations, uprooted trees, and unusual clusters twisted together high up or arranged pointing one direction. These “tree breaks” can’t easily be explained by nature and point to possible Bigfoot activity.</p>
+                </div>
+                <img class="object-cover rounded-lg h-60 w-full" src="https://blog.nature.org/wp-content/uploads/2022/02/49425803791_22a38a3230_k.jpg?w=473" alt="Tree Structures">
+            </div>
+        
+            <div class="card bg-gray-300 rounded-lg shadow-md flex flex-col">
+                <div class="flex-grow p-6">
+                    <h3 class="text-xl font-bold mb-4">Giant Nest Structures</h3>
+                    <p class="text-gray-700 mb-4">Late at night in the wilderness you may hear eerie noises that sound like a mix between chimpanzee calls and wolf howls. Reported Bigfoot vocalizations range from high-pitched shrieks to deep guttural moans that spike and waver oddly. The most common is a loud "whoop" call that transitions from high to low tones in a way difficult for humans to replicate. These unidentified calls are a way to signal others far away so listen close!</p>
+                </div>
+                <img class="object-cover rounded-lg h-60 w-full" src="https://ogden_images.s3.amazonaws.com/www.tribtoday.com/images/2021/03/21005818/bigfoot8-628x840.jpg" alt="Giant Nest Structures">
+            </div>
+        
+            <div class="card bg-gray-300 rounded-lg shadow-md flex flex-col">
+                <div class="flex-grow p-6">
+                    <h3 class="text-xl font-bold mb-4">Whoops & Howls</h3>
+                    <p class="text-gray-700 mb-4">Keep an eye out for very large stick formations piled peculiarly between trees or in remote forest areas. With interwoven branches and leaves shaped like a dome or cone reaching heights of 8 feet or more, these could be hand-built Bigfoot nests. Scientists speculate they are used as temporary shelters or observation posts out of a creature’s normal range, allowing it rest safely when roaming new terrain..</p>
+                </div>
+                <img class="object-cover rounded-lg h-60 w-full" src="https://i.ytimg.com/vi/GdZxdFRmx0I/maxresdefault.jpg" alt="Whoops & Howls">
+            </div>
+        </section>
+        
+        
+        
+       
+    </main>
+
+    <!-- **FOOTER** -->
+    <footer class="flex w-1/2 m-auto py-10 items-center">
+        <section class="flex gap-4 rounded px-4 py-4 flex-col m-auto items-center border rounded-xl border-2 border-blue-900">
+            <h3 class="text-center text-xl">Recent Sightings Updates</h3>
+            <h4>Sign up to get notified of recent sightings</h4>
+            <form class="flex flex-col items-center">
+                <input class="rounded px-2 py-2 w-full border rounded-xl border-grey-900" type="email"
+                    placeholder="Your email">
+                <button
+                    class="mt-2 bg-black text-xl hover:bg-white hover:text-black text-white px-4 py-2 rounded-full">Subscribe</button>
+            </form>
+        </section>
+    </footer>
+
+    <script>
+        // Counter JavaScript code
+        let count = 0;
+        let target = 9000000;
+        let counterElement = document.getElementById('counter');
+
+        function updateCounter() {
+            if (count < target) {
+                count += 1;
+                counterElement.innerText = count;
+            }
+        }
+        setInterval(updateCounter, 1);
+    </script>
+</body>
+
+</html>

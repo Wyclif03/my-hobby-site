@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="font-serif text-roboto" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Big Foot Believers United</title>
+</head>
+
+<body>
+    <header>
+        <!-- nav bar -->
+        <nav class="flex bg-gray-300 justify-center items-center flex-col sm:flex-row">
+            <a href="index.html"><img class="w-20 p-1" src="https://www.shutterstock.com/image-vector/funny-bigfoot-t-shirt-design-260nw-2353029723.jpg"
+                    alt="BigFoot logo"></a>
+            <div class="flex flex-col sm:flex-row mt-1 gap-1">
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/index.html">About Us</a>
+                </button>
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/bigfoot-signs.html">Evidence of Bigfoot</a>
+                </button>
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/bigfoot-legends.html">Bigfoot Legends</a>
+                </button>
+                <button class="btn bg-gray-700 hover:bg-blue-600 text-white rounded py-1 px-3">
+                    <a href="/bigfoot-submit-sighting.html">Submit a sighting</a>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Title -->
+        <div>
+            <h1 class="text-5xl font-bold text-center mt-5">Signs of Bigfoot</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- sightings recorded counter -->
+        <section class="flex flex-col items-center justify-center">
+            <h2 class="text-center mt-6 text-3xl">Sightings this week</h2>
+            <div id="counter" class="p-2 bg-gray-300 rounded-full text-center w-1/6">
+                <span class="font-bold text-4xl inline-block">0</span>
+            </div>
+        </section>
+        <section>
+           <!-- tabs -->
+<div class="container mx-auto mt-10 flex flex-col items-center">
+ 
+    <div class="flex">
+        <button class="tab bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-2" onclick="openTab('tab1')">The Ape Canyon Attack</button>
+        <button class="tab bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2" onclick="openTab('tab2')">The Albert Ostman Kidnapping</button>
+    </div>
+    <div id="tab1" class="panel hidden mt-4 p-4 bg-white rounded shadow w-full">
+        <p>In 1924, miners prospecting near Mount St. Helens claimed to be attacked one night by several large, hairy "ape men" that pelted rocks from above. They shot at the creatures and said the attack lasted all night before escaping at dawn. Some skeptical investigators think it could have actually been another group of miners playing a prank on them.</p>
+    </div>
+    <div id="tab2" class="panel hidden mt-4 p-4 bg-white rounded shadow w-full">
+        <p>In 1924, Albert Ostman said while prospecting in a remote forest he was picked up in his sleeping bag by a large male Bigfoot and carried back to their camp. He claimed a family held him captive for days and fed him vegetation before he freed himself. But many wonder if Ostman fabricated elements or the entire tale.</p>
+    </div>
+</div>
+
+<!-- JS -->
+<script>
+    // Counter JavaScript code
+    let count = 0;
+    let target = 9000000;
+    let counterElement = document.getElementById('counter');
+
+    function updateCounter() {
+        if (count < target) {
+            count += 1;
+            counterElement.innerText = count;
+        }
+    }
+    setInterval(updateCounter, 1);
+</script>
+<script>
+
+// Track current tab  
+let currentTab = null;  
+
+// Handles tab toggle logic
+function openTab(tabName){
+
+  // If current tab exists, hide it
+  if (currentTab) {
+    currentTab.classList.add("hidden");
+  }
+
+  // Open the clicked tab by id name
+  currentTab = document.getElementById(tabName);
+  currentTab.classList.remove("hidden");  
+
+}
+
+</script>
+        </section>
+        
+        
+       
+    </main>
+
+    <!-- footer -->
+    <footer class="flex w-1/2 m-auto py-10 items-center">
+        <section class="flex gap-4 rounded px-4 py-4 flex-col m-auto items-center border rounded-xl border-2 border-blue-900">
+            <h3 class="text-center text-xl">Recent Sightings Updates</h3>
+            <h4>Sign up to get notified of recent sightings</h4>
+            <form class="flex flex-col items-center">
+                <input class="rounded px-2 py-2 w-full border rounded-xl border-grey-900" type="email"
+                    placeholder="Your email">
+                <button
+                    class="mt-2 bg-black text-xl hover:bg-white hover:text-black text-white px-4 py-2 rounded-full">Subscribe</button>
+            </form>
+        </section>
+    </footer>
+</body>
+
+</html>
